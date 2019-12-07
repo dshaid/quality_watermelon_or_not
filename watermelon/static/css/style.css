@@ -140,3 +140,8 @@ footer {
     padding: 5px;
 
 }
+
+.login_center {
+    text-align: center;
+    margin:0 auto;
+}

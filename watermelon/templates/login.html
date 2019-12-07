@@ -1,13 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h3>登录</h3>
-<form method="post">
-
-    <label for="username">Username</label><br><br>
-    <input type="text" name="username", id="username" autocomplete="off" required><br><br>
-    <label for="password">Password</label><br><br>
-    <input type="password" name="password" id="password" autocomplete="off" required><br><br>
-    <input class="btn" type="submit" name="submit" value=" 登录 ">
+<h1 style="text-align: center">登录</h1>
+<form method="post" class="login_center">
+    <label for="username">用户名 &nbsp;</label>
+    <input type="text" name="username", id="username" autocomplete="off" placeholder="username" required><br><br>
+    <label for="password">密码 &nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input type="password" name="password" id="password" autocomplete="off" placeholder="password" required><br><br>
+    <input style="font-size: small" class="btn" type="submit" name="submit" value=" 登录 ">
 </form>
 {% endblock %}

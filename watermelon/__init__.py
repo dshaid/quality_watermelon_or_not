@@ -41,3 +41,7 @@ def inject_user():
 
 
 from watermelon import views, errors, commands
+
+
+if __name__ == '__main__':
+    app.run()

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <ul class="movie-list">
+        <li><b>请在下方选择西瓜表面特征：</b></li>
+        <li>
+            <form class="inline-form" method="post">
+                色泽：
+                <input type="radio" name="color" value="青绿" checked="checked"> 青绿 &nbsp;&nbsp;
+                <input type="radio" name="color" value="乌黑"> 乌黑 &nbsp;&nbsp;
+                <input type="radio" name="color" value="浅白"> 浅白 <br><br>
+
+                根蒂：
+                <input type="radio" name="gendi" value="蜷缩" checked="checked"> 蜷缩 &nbsp;&nbsp;
+                <input type="radio" name="gendi" value="稍蜷"> 稍蜷 &nbsp;&nbsp;
+                <input type="radio" name="gendi" value="硬挺"> 硬挺 <br><br>
+
+                敲声：
+                <input type="radio" name="voice" value="浊响" checked="checked"> 浊响 &nbsp;&nbsp;
+                <input type="radio" name="voice" value="沉闷"> 沉闷 &nbsp;&nbsp;
+                <input type="radio" name="voice" value="清脆" > 清脆 <br><br>
+
+
+                纹理：
+                <input type="radio" name="wenli" value="清晰" checked="checked"> 清晰 &nbsp;&nbsp;
+                <input type="radio" name="wenli" value="稍糊"> 稍糊 &nbsp;&nbsp;
+                <input type="radio" name="wenli" value="模糊"> 模糊
+                 <br><br>
+
+                脐部：
+                <input type="radio" name="qibu" value="凹陷" checked="checked"> 凹陷 &nbsp;&nbsp;
+                <input type="radio" name="qibu" value="稍凹"> 稍凹 &nbsp;&nbsp;
+                <input type="radio" name="qibu" value="平坦"> 平坦 <br><br>
+
+                触感：
+                <input type="radio" name="feeling" value="硬滑" checked="checked"> 硬滑 &nbsp;&nbsp;
+                <input type="radio" name="feeling" value="软粘"> 软粘 <br><br>
+
+                <input type="submit" value="submit" class="btn" onclick="alert('正在分析，请稍后！')">
+            </form>
+        </li>
+    </ul>
+{% endblock %}

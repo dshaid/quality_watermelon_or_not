@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if current_user.is_authenticated  %}
+        <ul class="movie-list">
+            <li><b>您一共有 {{ histories|length}} 条记录</b></li>
+        {% for history in histories %}  {# 判断是否登录 #}
+        <li>第 {{ history.id }} 条记录 &nbsp; - &nbsp; {{ history.quality }} &nbsp; {{ history.time }}
+            <span class="float-right">
+                    {# 为了安全的考虑，一般会使用 POST 请求来提交删除请求，也就是使用表单来实现（而不是创建删除链接） #}
+                    <form class="inline-form" method="post" action="{{ url_for('delete_watermelon', history_id=history.id) }}">
+                    <input class="btn" type="submit" name="delete" value="Delete" onclick="return confirm('Are you sure?')">
+                    </form>
+            </span>
+        </li>
+        {% endfor %}  {# 使用endfor结束 for 语句 #}
+    </ul>
+
+    {% endif %}
+{% endblock %}
